@@ -1,0 +1,14 @@
+package firstday;
+
+public class Restart {
+	
+	public static void main(String[] args) {
+		byte a =10;
+		byte a1 =1.5;
+				
+		System.out.println(a1);
+		
+		
+	}
+
+}

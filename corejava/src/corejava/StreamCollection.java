@@ -1,0 +1,25 @@
+package corejava;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+public class StreamCollection {
+
+	public static void main(String[] args) {
+		Stream<Integer> intStream = Stream.of(1,2,3,4,5,6);
+		List<Integer> intList = intStream.collect(Collectors.toList());
+		System.out.println(intList);
+		
+		
+		
+		intStream = Stream.of(1,2,3,4,5,6);
+		Map<Integer,Integer> intMap = intStream.collect(Collectors.toMap(i->i,i-> i+10));
+		System.out.println(intMap);
+		
+		
+		Stream<String> names = Stream.of("aBc","d","ef");
+		System.out.println(names.map(s->{
+			return s.toUpperCase();
+		}).collect(Collectors.toList()));
+	}
+
+}
